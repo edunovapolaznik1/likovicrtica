@@ -1,0 +1,60 @@
+<div class="container" style="margin-top: 100px">
+  <div class="row mb-5">
+    <div class="col-12">
+      <h1 class="text-center">Uređivanje lika</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8 offset-2">
+      <form #djelatnikEditForm="ngForm" (ngSubmit)="uredi()">
+        <fieldset>
+          <legend>Popunite sve podatke</legend>
+          <div>
+            <label for="ime" class="form-label mt-4">Ime</label>
+            <input
+              name="ime"
+              [(ngModel)]="lik.ime"
+              type="text"
+              class="form-control"
+              id="ime"
+            />
+          </div>
+          <div>
+            <label for="nazivCrtica" class="form-label mt-4"
+              >Naziv Crtića</label
+            >
+            <input
+              name="nazivCrtica"
+              [(ngModel)]="lik.nazivCrtica"
+              type="text"
+              class="form-control"
+              id="nazivCrtica"
+            />
+          </div>
+          <div>
+            <label for="opis" class="form-label mt-4">Opis</label>
+            <input
+              name="opis"
+              [(ngModel)]="lik.opis"
+              type="text"
+              class="form-control"
+              id="opis"
+            />
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn-primary mt-2" style="width: 100%">
+          Ažuriraj
+        </button>
+        <button
+          routerLink="/likovi"
+          type="button"
+          class="btn btn-danger mt-2"
+          style="width: 100%"
+        >
+          Nazad
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
